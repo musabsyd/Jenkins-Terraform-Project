@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-HI all
-=======
-HI EVERYONE
->>>>>>> bee93f94340643073b6f03460037a138015f7fae
