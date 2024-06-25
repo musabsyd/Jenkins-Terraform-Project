@@ -1,7 +1,7 @@
 provider "aws" {
-region = "ap-south-2"
-access_key = "AKIASG72NZK6KT6EMVPL"
-secret_key = "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"
+region = "ap-south-1"
+access_key = "AKIASG72NZK6L36NPAUN"
+secret_key = "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"
 }
 resource "aws_s3_bucket" "mybucket" {
 bucket = "msbbuckets3"
