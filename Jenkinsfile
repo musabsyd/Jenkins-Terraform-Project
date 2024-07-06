@@ -1,35 +1,39 @@
 pipeline {
+    agent any
     environment {
         AWS_ACCESS_KEY_ID     = credentials('AWS_ACCESS_KEY_ID')
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
-    
-    agent any
+
     stages {
-        stage('CheckOut') {
+        stage('Checkout') {
             steps {
-             git 'https://github.com/musabsyd/proj1.git'   
-                echo 'Downloaded the code from git hub SuccessfullY'
+                git 'https://github.com/musabsyd/Jenkins-Terraform-Project.git'
+                echo 'Downloding Code Successful'
             }
         }
-        stage('Initialize') {
+        stage('Terraform Init') {
             steps {
                 sh "terraform init"
+                echo 'Terraform Init Successful'
             }
         }
-        stage('Validate') {
+        stage('Terraform validate') {
             steps {
-              sh "terraform validate"
+                sh "terraform validate"
+                echo 'Terraform validate Successful'
             }
         }
-        stage('Plan') {
+        stage('Terraform plan') {
             steps {
                 sh "terraform plan"
+                echo 'Terraform Plan Successful'
             }
         }
-        stage('Apply') {
+        stage('Terraform Apply') {
             steps {
                 sh "terraform apply --auto-approve"
+                echo 'Terraform Plan Successful'
             }
         }
     }
