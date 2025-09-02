@@ -33,7 +33,7 @@ pipeline {
         stage('Terraform Apply') {
             steps {
                 sh "terraform apply --auto-approve"
-                echo 'Terraform Plan Successful'
+                echo 'Terraform Build Successful'
             }
         }
     }
