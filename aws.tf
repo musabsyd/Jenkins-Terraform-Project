@@ -2,5 +2,5 @@ provider "aws" {
 region = "ap-south-2"
 }
 resource "aws_s3_bucket" "mybucket" {
-bucket = "gitmsb1556"
+bucket = "gitmsb152"
 }
